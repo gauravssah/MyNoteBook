@@ -6,17 +6,13 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-    res.send('Hello Gaurav!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello Gaurav!')
+// })
 
-app.get('/api/login', (req, res) => {
-    res.send('Hello Gaurav Login Now!')
-})
-
-app.get('/api/Singin', (req, res) => {
-    res.send('Hello Gaurav Singin Now!')
-})
+// Available Routes -----------
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/notes', require('./routes/notes'))
 
 app.listen(port, () => {
     console.log(`Example app listening on port at http://localhost:${port}`)
