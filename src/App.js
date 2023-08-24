@@ -9,6 +9,7 @@ import Alert from './components/Alert';
 
 
 function App() {
+
   return (
     < >
       <NoteState>

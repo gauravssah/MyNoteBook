@@ -8,7 +8,7 @@ const NoteItem = (props) => {
 
     return (
         <div className='col-md-3'>
-            <div className="card my-3">
+            <div className="card my-3 ">
                 <div className="card-body">
                     <div className="d-flex justify-content-between ">
                         <h5 className="card-title">{note.title}</h5>
