@@ -12,7 +12,7 @@ const NoteItem = (props) => {
                 <div className="card-body">
                     <div className="d-flex justify-content-between ">
                         <h5 className="card-title">{note.title}</h5>
-                        <div className="operations">
+                        <div className="operations" style={{ minWidth: "20%" }}>
                             <i className="far fa-trash-alt mx-2" onClick={() => { deleteNote(note._id) }}></i>
                             <i className="far fa-edit" onClick={() => { updateNote(note) }}></i>
                         </div>
