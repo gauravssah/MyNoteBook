@@ -34,10 +34,10 @@ const AddNote = () => {
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" style={{ cursor: "pointer" }} />
                     <label className="form-check-label" htmlFor="exampleCheck1" style={{ cursor: "pointer" }}>Check me out</label>
                 </div>
-                <button type="submit" className="btn btn-info" onClick={handalclick}>Submit</button>
+                <button type="submit" className="btn btn-info" onClick={handalclick}>Add Note</button>
             </form>
         </div>
     )
 }
 
-export default AddNote
+export default AddNote;

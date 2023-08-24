@@ -5,8 +5,8 @@ const NoteState = (props) => {
     const notesInitial = [
         {
             "_id": "64e4c962ba20a46f4cbe9b6e",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "My Title",
+            "user": "64e304362b7dccc2a8be1dfd2",
+            "title": "My Title1",
             "description": "Please wake up early",
             "tag": "personal",
             "date": "1692715362471",
@@ -14,8 +14,8 @@ const NoteState = (props) => {
         },
         {
             "_id": "64e4c963ba20a46f4cbe9b70",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "My Title",
+            "user": "64e304362b37dccca8be1dfd2",
+            "title": "My Title2",
             "description": "Please wake up early",
             "tag": "personal",
             "date": "1692715363483",
@@ -23,65 +23,11 @@ const NoteState = (props) => {
         },
         {
             "_id": "64e4c964ba20a46f4cbe9b72",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "My Title",
+            "user": "64e304362b7d6ccca8be1dfd2",
+            "title": "My Title3",
             "description": "Please wake up early",
             "tag": "personal",
             "date": "1692715364567",
-            "__v": 0
-        },
-        {
-            "_id": "64e4c970ba20a46f4cbe9b74",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "My Title2",
-            "description": "Please wake up early2",
-            "tag": "personal",
-            "date": "1692715376119",
-            "__v": 0
-        },
-        {
-            "_id": "64e4c976ba20a46f4cbe9b76",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "My Title2",
-            "description": "Please wake up early2",
-            "tag": "personal3",
-            "date": "1692715382934",
-            "__v": 0
-        },
-        {
-            "_id": "64e4c9b0ba20a46f4cbe9b78",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "Gauarv Title",
-            "description": "Please wake up early gauarv",
-            "tag": "gaurav",
-            "date": "1692715440958",
-            "__v": 0
-        },
-        {
-            "_id": "64e4c9bfba20a46f4cbe9b7a",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "Gauarv Title",
-            "description": "Please wake up early gauarv",
-            "tag": "gaurav",
-            "date": "1692715455887",
-            "__v": 0
-        },
-        {
-            "_id": "64e4ca16ba20a46f4cbe9b7c",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "Gauarv Title2",
-            "description": "Please wake up early gauarv",
-            "tag": "gaurav",
-            "date": "1692715542743",
-            "__v": 0
-        },
-        {
-            "_id": "64e592a4a1278bb3047a2073",
-            "user": "64e304362b7dccca8be1dfd2",
-            "title": "New note",
-            "description": "Please access the note",
-            "tag": "youtube",
-            "date": "1692766884711",
             "__v": 0
         }
     ]
@@ -93,8 +39,8 @@ const NoteState = (props) => {
         // Todo Api call
         console.log("Adding a new note")
         const note = {
-            "_id": "64e4c963ba20a46f4cbe89b70",
-            "user": "64e304362b7dccca8be15dfd2",
+            "_id": "64e4c963ba320a46f4cbe89b70",
+            "user": "64e304362b7dc3cca8be15dfd2",
             "title": title,
             "description": description,
             "tag": tag,
@@ -105,8 +51,11 @@ const NoteState = (props) => {
     }
 
     // Delete a Note
-    const deleteNote = () => {
-
+    const deleteNote = (id) => {
+        // Todo Api call
+        console.log("deleting the note with id" + id);
+        const newNotes = notes.filter((note) => { return note._id !== id })
+        setNotes(newNotes)
     }
 
     // Edit a Note

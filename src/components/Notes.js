@@ -4,7 +4,7 @@ import NoteItem from './NoteItem';
 import AddNote from './AddNote';
 const Notes = () => {
     const context = useContext(NoteContex);
-    const { notes, addNote } = context;
+    const { notes } = context;
     return (
         <>
             <AddNote />
@@ -18,4 +18,4 @@ const Notes = () => {
     )
 }
 
-export default Notes
+export default Notes;
