@@ -33,7 +33,9 @@ export default function Signup(props) {
 
     return (
         <div className='container w-75 my-5'>
-            <form onSubmit={handleSubmit}>
+            <h2>Sign Up and Join Us Today!</h2>
+
+            <form onSubmit={handleSubmit} className="my-3">
 
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>

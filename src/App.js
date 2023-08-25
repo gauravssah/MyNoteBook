@@ -21,7 +21,7 @@ function App() {
 
     setTimeout(() => {
       setAlert(null)
-    }, 1000000);
+    }, 1000);
   }
 
   return (
@@ -30,7 +30,7 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Alert alert={alert} />
-          <div className="container">
+          <div className="container" style={{ marginTop: "58px" }}>
             <Routes>
               <Route exact path="/" element={<Home showAlert={showAlert} />} />
               <Route exact path="/about" element={<About />} />

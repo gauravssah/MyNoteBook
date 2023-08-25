@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = (props) => {
@@ -20,8 +20,8 @@ const Login = (props) => {
         if (json.success) {
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken);
-            navigate('/');
             props.showAlert('Logged in Successfully', 'success');
+            navigate('/');
 
         } else {
             props.showAlert('Invalid Details', 'danger');
@@ -34,7 +34,8 @@ const Login = (props) => {
 
     return (
         <div className='container w-75 my-5'>
-            <form onSubmit={handleSubmit}>
+            <h2>Welcome Back! Log In to Your Account</h2>
+            <form onSubmit={handleSubmit} className="my-3">
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email' aria-describedby="emailHelp" />

@@ -2,13 +2,19 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import NoteContex from '../context/notes/NoteContext';
 import NoteItem from './NoteItem';
 import AddNote from './AddNote';
+import { useNavigate } from 'react-router-dom';
 
 const Notes = (props) => {
     const context = useContext(NoteContex);
+    let navigate = useNavigate();
     const { notes, getNotes, editNote } = context;
 
     useEffect(() => {
-        getNotes()
+        if (localStorage.getItem('token')) {
+            getNotes()
+        } else {
+            navigate('/login');
+        }
         // eslint-disable-next-line
     }, [])
 
@@ -51,18 +57,18 @@ const Notes = (props) => {
                             <form className='my-3'>
 
                                 <div className="mb-3">
-                                    <label htmlFor="etitle" className="form-label">Title</label>
+                                    <label htmlFor="etitle" className="form-label">Title:</label>
                                     <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={5} required />
 
                                 </div>
 
                                 <div className="mb-3">
-                                    <label htmlFor="edescription" className="form-label">Description</label>
+                                    <label htmlFor="edescription" className="form-label">Description:</label>
                                     <input type="text" className="form-control" id="edescription" name='edescription' value={note.edescription} onChange={onChange} minLength={5} required />
                                 </div>
 
                                 <div className="mb-3">
-                                    <label htmlFor="etag" className="form-label">Tag</label>
+                                    <label htmlFor="etag" className="form-label">Tag:</label>
                                     <input type="text" className="form-control" id="etag" name='etag' value={note.etag} onChange={onChange} />
                                 </div>
 
