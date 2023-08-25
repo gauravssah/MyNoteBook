@@ -22,7 +22,7 @@ const AddNote = (props) => {
     return (
         <div className="container my-3">
             <h2>Add a Note</h2>
-            <form className='my-3'>
+            <form className='my-3' onSubmit={handalclick}>
 
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Title</label>
@@ -37,10 +37,10 @@ const AddNote = (props) => {
 
                 <div className="mb-3">
                     <label htmlFor="tag" className="form-label">Tag</label>
-                    <input type="text" className="form-control" id="tag" name='tag' value={note.tag} onChange={onChange} minLength={5} required />
+                    <input type="text" className="form-control" id="tag" name='tag' value={note.tag} onChange={onChange} required />
                 </div>
 
-                <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-info" onClick={handalclick}>Add Note</button>
+                <button type="submit" className="btn btn-info">Add Note</button>
             </form>
         </div>
     )

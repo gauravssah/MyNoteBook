@@ -37,12 +37,12 @@ export default function Signup(props) {
 
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" onChange={onChange} id="name" name='name' />
+                    <input type="text" className="form-control" onChange={onChange} id="name" name='name' required />
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" onChange={onChange} id="email" name='email' aria-describedby="emailHelp" />
+                    <input type="email" className="form-control" onChange={onChange} id="email" name='email' required aria-describedby="emailHelp" />
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
 
