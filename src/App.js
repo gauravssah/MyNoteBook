@@ -33,6 +33,7 @@ function App() {
           <div className="container" style={{ marginTop: "58px" }}>
             <Routes>
               <Route exact path="/" element={<Home showAlert={showAlert} />} />
+              <Route exact path="/MyNoteBook" element={<Home showAlert={showAlert} />} />
               <Route exact path="/about" element={<About />} />
               <Route exact path="/login" element={<Login showAlert={showAlert} />} />
               <Route exact path="/Signup" element={<Signup showAlert={showAlert} />} />

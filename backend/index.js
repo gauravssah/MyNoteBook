@@ -16,3 +16,8 @@ app.use('/api/notes', require('./routes/notes'))
 app.listen(port, () => {
     console.log(`MyNotes app listening on port at http://localhost:${port}`)
 })
+
+// const corsOptions = {
+//     origin: ['http://localhost:3000', 'https://your-github-username.github.io'],
+//     // ...
+// };
