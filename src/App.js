@@ -24,6 +24,12 @@ function App() {
     }, 1000);
   }
 
+  const corsOptions = {
+    origin: ['http://localhost:3000', 'https://gauravssah.github.io'],
+
+  };
+
+
   return (
     < >
       <NoteState>
