@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +9,6 @@ const Navbar = () => {
         localStorage.removeItem('token');
         navigate('/login');
     }
-
 
 
 
@@ -48,11 +47,17 @@ const Navbar = () => {
                             <Link className="btn btn-light btn-sm fw-bold text-dark" to='/login' role='button'>Login</Link>
                             <Link className="btn btn-light btn-sm fw-bold mx-2 text-dark" to='/signup' role='button'>Signup</Link>
                         </form> :
-                            // Prpfile ------
+
+                            // ---------------- Profile ------------------
 
                             <li className="nav-item dropdown" style={{ listStyle: "none" }}>
                                 <a
-                                    className="nav-link dropdown-toggle text-white" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    className="nav-link dropdown-toggle text-white"
+                                    to="/"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
                                 >
                                     <i className="fas fa-user mx-1"></i> Profile
                                 </a>
@@ -63,10 +68,9 @@ const Navbar = () => {
                                 >
                                     <li>
                                         <a className="dropdown-item" to="/">
-                                            Here use name
+                                            My account
                                         </a>
                                     </li>
-
 
                                     <li>
                                         <button onClick={handleLogout} className="btn btn-light btn-sm fw-bold text-dark">
@@ -75,10 +79,7 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </li>
-
-
                         }
-
                     </div>
                 </div>
             </nav>
