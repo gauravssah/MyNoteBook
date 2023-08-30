@@ -46,7 +46,37 @@ const Navbar = () => {
                         {!localStorage.getItem('token') ? <form className="d-flex">
                             <Link className="btn btn-light btn-sm fw-bold text-dark" to='/login' role='button'>Login</Link>
                             <Link className="btn btn-light btn-sm fw-bold mx-2 text-dark" to='/signup' role='button'>Signup</Link>
-                        </form> : <button onClick={handleLogout} className='btn btn-light btn-sm fw-bold text-dark'>Logout</button>}
+                        </form> :
+                            // Prpfile ------
+
+                            <li className="nav-item dropdown" style={{ listStyle: "none" }}>
+                                <a
+                                    className="nav-link dropdown-toggle text-white" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                >
+                                    <i className="fas fa-user mx-1"></i> Profile
+                                </a>
+
+                                <ul
+                                    className="dropdown-menu dropdown-menu-lg-end dropdown-menu-start text-center"
+                                    aria-labelledby="navbarDropdown"
+                                >
+                                    <li>
+                                        <a className="dropdown-item" to="/">
+                                            My account
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <button onClick={handleLogout} className="btn btn-light btn-sm fw-bold text-dark">
+                                            Logout
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        }
+
                     </div>
                 </div>
             </nav>
