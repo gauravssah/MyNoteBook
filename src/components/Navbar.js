@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,7 @@ const Navbar = () => {
         localStorage.removeItem('token');
         navigate('/login');
     }
+
 
 
 
@@ -62,9 +63,10 @@ const Navbar = () => {
                                 >
                                     <li>
                                         <a className="dropdown-item" to="/">
-                                            My account
+                                            Here use name
                                         </a>
                                     </li>
+
 
                                     <li>
                                         <button onClick={handleLogout} className="btn btn-light btn-sm fw-bold text-dark">
