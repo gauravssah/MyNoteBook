@@ -33,7 +33,7 @@ export default function Signup(props) {
 
     return (
         <div className='container w-75 my-5'>
-            <h2>Join Us Today! Sign Up for an Account</h2>
+            <h2>Sign Up and Join Us Today!</h2>
 
             <form onSubmit={handleSubmit} className="my-3">
 
