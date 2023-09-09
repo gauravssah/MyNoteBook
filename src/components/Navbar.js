@@ -30,17 +30,6 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
                             </li>
-                            {/* <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </Link>
-                            <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" to="#">Action</Link></li>
-                                <li><Link className="dropdown-item" to="#">Another action</Link></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-                            </ul>
-                        </li> */}
 
                         </ul>
                         {!localStorage.getItem('token') ? <form className="d-flex">
